@@ -1,3 +1,4 @@
+import './Tarjeta.css';
 function Tarjeta({ titulo, descripcion, imagenUrl, botonTexto }) {
     return (
       <div className="tarjeta">

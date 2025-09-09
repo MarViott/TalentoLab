@@ -1,5 +1,5 @@
 import './App.css'
-import { MiBoton } from './MiBoton.jsx'
+import { MiBoton } from './components/MiBoton.jsx'
 
 function App() {  
 
@@ -11,18 +11,21 @@ function App() {
     <MiBoton text='New in' color='blue'/>
     <MiBoton text='Shop' color='yellow'/>
     <MiBoton text='Coleccions' color='green'/>
+    <hr />
+    <h2>Productos</h2>
+    <ListaProductos />
         <div>
          <Tarjeta
-          titulo="Camiseta"
-          descripcion="Camiseta de algodón 100% orgánico"
-          imagenUrl="https://example.com/camiseta.jpg"
+          titulo="Abrigos"
+          descripcion="Abrigos de lana para el invierno"
+          imagenUrl="https://example.com/abrigo.jpg"
           botonTexto="Comprar"
           />
 
           <Tarjeta
-          titulo="Pantalones"
-          descripcion="Pantalones vaqueros de corte clásico"
-          imagenUrl="https://example.com/pantalones.jpg"
+          titulo="Remeras"
+          descripcion="Remeras de algodón orgánicos"
+          imagenUrl="https://example.com/remera.jpg"
           botonTexto="Comprar"
           />
 
@@ -34,9 +37,9 @@ function App() {
           />
           
           <Tarjeta
-          titulo="Zapatos"
-          descripcion="Zapatos deportivos cómodos y elegantes"
-          imagenUrl="https://example.com/zapatos.jpg"
+          titulo="Accesorios"
+          descripcion="Accesorios de moda para complementar tu look"
+          imagenUrl="https://example.com/accesorios.jpg"
           botonTexto="Comprar"
           />
 
