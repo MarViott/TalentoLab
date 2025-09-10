@@ -6,13 +6,13 @@ function ListaProductos() {
     ];
 
     return (
-        <ol>
+        <ul>
             {productos.map((producto) => (
                 <li key={producto.id}>
                     {producto.nombre} - ${producto.precio}
                 </li>
             ))}
-        </ol>
+        </ul>
     );
 }
 export default ListaProductos;

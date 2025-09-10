@@ -1,5 +1,15 @@
 import './App.css'
+import { ListaUsuarios } from ./ListaUsuarios.jsx'
 import { MiBoton } from './components/MiBoton.jsx'
+import { ListaProductos } from './components/lista.jsx'
+import { Tarjeta } from './components/Tarjeta.jsx'
+import React from 'react';  
+import Header from './components/Header';  
+import Nav from './components/Nav';  
+import Main from './components/Main';  
+import Gallery from './components/Gallery';  
+import Footer from './components/Footer';  
+
 
 function App() {  
 
@@ -12,6 +22,14 @@ function App() {
     <MiBoton text='Shop' color='yellow'/>
     <MiBoton text='Coleccions' color='green'/>
     <hr />
+    <div>  
+            <Header />  
+            <Nav />  
+            <Main />  
+            <Gallery />  
+            <Footer />  
+        </div>  
+        <hr />
     <h2>Productos</h2>
     <ListaProductos />
         <div>
