@@ -1,0 +1,35 @@
+.tarjeta-proyecto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .proyecto-titulo {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    color: #222;
+  }
+  
+  .proyecto-descripcion {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 0 15px;
+  }
+  
+  .proyecto-boton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .proyecto-boton:hover {
+    background-color: #118446;
+  }

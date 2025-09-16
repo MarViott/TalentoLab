@@ -1,4 +1,6 @@
-import './Tarjeta.css';
+import React from 'react';
+import './styles/Tarjeta.css';
+ // Asegúrate de tener estilos para la tarjeta
 function Tarjeta({ titulo, descripcion, imagenUrl, botonTexto }) {
     return (
       <div className="tarjeta">

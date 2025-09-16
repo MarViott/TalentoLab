@@ -1,10 +1,12 @@
 import React from 'react';  
 function Main() {  
-    return (  
+    return (
+        <>  
         <main style={{ padding: "20px" }}>  
-            <h2>Clothes</h2>  
-            <p>Clothes for your soul</p>  
-        </main>  
+            <h2>Contenido principal</h2>  
+            <p>Esto es el contenido principal</p>  
+        </main> 
+        </> 
     );  
 }  
 export default Main; 
