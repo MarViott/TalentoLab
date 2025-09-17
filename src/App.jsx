@@ -35,20 +35,30 @@ function App() {
       nombre: 'Carlos',
       descripcion: 'Project Manager',
       imagen: 'https://picsum.photos/id/1014/200/200'
+    },
+    { 
+      nombre: 'Sofía',
+      descripcion: 'Especialista en Marketing',
+      imagen: 'https://picsum.photos/id/1015/200/200'
+    },
+    { 
+      nombre: 'Javier',
+      descripcion: 'Diseñador',
+      imagen: 'https://picsum.photos/id/1016/200/200'
     }
   ];
 
-  const usuarios = [
-    { id: 1, nombre: 'Juan', descripcion: 'Usuario activo' },
-    { id: 2, nombre: 'Maria', descripcion: 'Usuario inactivo' },
-    { id: 3, nombre: 'Pedro', descripcion: 'Usuario premium' }
-  ];
 
   const intereses = ['Tecnología', 'Deporte', 'Arte', 'Música', 'Lectura'];
 
   return (
     <div className="app-container">
-      <header className="app-header">      
+      <header className="app-header">
+      <ol style={{ listStyle: "none", display: "flex", justifyContent: "space-evenly", margin: 10 }}>  
+                <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Registrate</a></li>  
+                <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Contacto</a></li>  
+                <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Carrito</a></li>  
+            </ol>         
       </header>
       
       <main className="app-main">

@@ -17,7 +17,7 @@ function Gallery() {
             marginTop: "20px" }}>
                   
             {images.map((src, index) => (  
-                <img key={index} src={src} alt={`Imagen ${index + 1}`} style={{ width: "150px", height: "150px" }} />  
+                <img key={index} src={src} alt={`Imagen ${index + 1}`} style={{ width: "250px", height: "250px" }} />  
             ))}  
         </section>  
     );  
