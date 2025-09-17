@@ -12,10 +12,11 @@
 
 /* Contenedor principal */
 .app-container {
+  display: grid;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  background: white;
+  background: whitesmoke;
   min-height: 100vh;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -23,7 +24,7 @@
 /* Header principal */
 .app-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   padding: 2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -33,7 +34,7 @@
 
 .app-header h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,6 +50,9 @@
 /* Main content */
 .app-main {
   padding: 2rem 0;
+  background: image(url('https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'));
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* Secciones */
@@ -62,11 +66,30 @@ section {
 
 section h2 {
   color: #333;
+  text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
   border-bottom: 2px solid #667eea;
   padding-bottom: 0.5rem;
   display: inline-block;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;  
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+p {
+  color: #666;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 /* Titulo */
@@ -80,14 +103,14 @@ section h2 {
 /* Equipo container */
 .equipo-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
   padding: 20px;
 }
 
 .tarjeta-miembro {
-  background: white;
+  background: #569264;
   padding: 1.5rem;
   border-radius: 10px;
   border: 2px solid #e0e0e0;
@@ -108,7 +131,7 @@ section h2 {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  border: 3px solid #667eea;
+  border: 3px solid white;
 }
 
 .miembro-nombre {
@@ -119,8 +142,8 @@ section h2 {
 }
 
 .miembro-descripcion, .miembro-rol {
-  color: #666;
-  font-size: 1rem;
+  color: white;
+  font-size: 1rem;  
   margin: 5px 0;
 }
 
@@ -146,7 +169,7 @@ section h2 {
 }
 
 .interes-boton.selected {
-  background: #28a745 !important;
+  background: #569264 !important;
   color: white !important;
 }
 
@@ -192,12 +215,15 @@ ul {
 }
 
 ul li {
-  background: white;
+  background: ul li {
+    background: #f8f9fa;
+  }
+  ;
   padding: 1rem;
   margin-bottom: 0.5rem;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 ul li:hover {

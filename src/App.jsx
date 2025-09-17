@@ -48,9 +48,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <header className="app-header">
-        <h1>Mi Aplicación React</h1>
-        <hr />
+      <header className="app-header">      
       </header>
       
       <main className="app-main">
@@ -60,16 +58,10 @@ function App() {
         <Gallery />
         
         <section className="section-equipo">
-          <h2>Nuestro Equipo</h2>
-          <ListaEquipo equipo={equipo} />
-          <TarjetaEquipo equipo={equipo} />
+          
+          <h2>Nuestro Equipo</h2>         
           <EquipoTalentoLab equipo={equipo} />
-        </section>
-        
-        <section className="section-usuarios">
-          <h2>Usuarios</h2>
-          <ListaUsuario usuario={usuarios} />
-        </section>
+        </section>       
         
         <section className="section-intereses">
           <h2>Intereses</h2>

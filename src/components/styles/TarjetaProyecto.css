@@ -1,5 +1,5 @@
 .tarjeta-proyecto {
-    background-color: #fff;
+    background-color: whitesmoke;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -16,7 +16,7 @@
   
   .proyecto-descripcion {
     font-size: 1rem;
-    color: #555;
+    color: black;
     margin: 0 0 15px;
   }
   

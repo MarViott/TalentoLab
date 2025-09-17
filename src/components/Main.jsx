@@ -3,8 +3,8 @@ function Main() {
     return (
         <>  
         <main style={{ padding: "20px" }}>  
-            <h2>Contenido principal</h2>  
-            <p>Esto es el contenido principal</p>  
+            <h2>Productos</h2>  
+            <p>Aqui puedes encontrar nuestra nueva colección</p>  
         </main> 
         </> 
     );  
