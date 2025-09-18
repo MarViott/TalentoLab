@@ -10,7 +10,8 @@ function Header() {
             height: "100px",
             alignItems: "center",
          }}>  
-            <h1>Bienvenidos a Mi Tienda</h1>            
+            <h1>Bienvenidos a Talento Lab</h1>
+                  
         </header>  
     );  
 }  

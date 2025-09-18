@@ -6,7 +6,7 @@ function Footer() {
             padding: "10px", 
             textAlign: "center", 
             marginTop: "20px" }}>  
-            <p>&copy; 2025 - Mi Tienda</p>  
+            <p>&copy; 2025 - Talento Lab</p>  
         </footer>  
     );  
 }  

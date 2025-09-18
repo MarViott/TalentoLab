@@ -13,6 +13,10 @@ import GaleriaIntereses from './components/GaleriaIntereses.jsx';
 import TarjetaEquipo from './components/TarjetaEquipo.jsx';
 import EquipoTalentoLab from './components/EquipoTalentoLab.jsx';
 import TarjetaProyecto from './components/TarjetaProyecto.jsx';
+import Formulario from './components/Registrate.jsx';
+import Contacto from './components/Contacto.jsx';
+import Registrate from './components/Registrate.jsx';
+import Empresas from './components/Empresas.jsx';
 
 function App() {
   const equipo = [
@@ -43,7 +47,7 @@ function App() {
     },
     { 
       nombre: 'Javier',
-      descripcion: 'Diseñador',
+      descripcion: 'DevOps',
       imagen: 'https://picsum.photos/id/1016/200/200'
     }
   ];
@@ -67,11 +71,15 @@ function App() {
         <Main />
         <Gallery />
         
+        
+        
         <section className="section-equipo">
           
           <h2>Nuestro Equipo</h2>         
           <EquipoTalentoLab equipo={equipo} />
         </section>       
+
+        <Empresas />
         
         <section className="section-intereses">
           <h2>Intereses</h2>
@@ -81,8 +89,8 @@ function App() {
         <section className="section-proyectos">
           <h2>Proyectos</h2>
           <TarjetaProyecto 
-            titulo="Proyecto 1" 
-            descripcion="Descripción del proyecto" 
+            titulo="Proyecto Web Accesible" 
+            descripcion="Desarrollamos una plataforma web accesible para personas con discapacidades." 
             botonTexto="Explorar" 
           />
         </section>
@@ -94,6 +102,16 @@ function App() {
             onClick={() => alert('¡Botón clickeado!')} 
           />
         </section>
+        <section className="section-registro">
+          <h2>Regístrate</h2>
+          <Registrate />
+        </section>
+        <section className="section-contacto">
+          <h2>Contacto</h2>
+          <Contacto />
+        </section>
+       
+          
       </main>
       
       <Footer />
