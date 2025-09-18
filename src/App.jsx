@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import './index.css';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import { MiBoton } from './components/MiBoton.jsx';
 import Header from './components/Header';
 import Nav from './components/Nav';
@@ -12,7 +13,7 @@ import ListaEquipo from './components/ListaEquipo.jsx';
 import ListaUsuario from './components/ListaUsuarios.jsx';
 import GaleriaIntereses from './components/GaleriaIntereses.jsx';
 import TarjetaEquipo from './components/TarjetaEquipo.jsx';
-import EquipoTalentoLab from './components/EquipoTalentoLab.jsx';
+import EquipoTalentoLab from './components/pages/EquipoTalentoLab.jsx';
 import TarjetaProyecto from './components/TarjetaProyecto.jsx';
 import Formulario from './components/pages/Registrate.jsx';
 import Contacto from './components/pages/Contacto.jsx';
@@ -20,12 +21,8 @@ import Registrate from './components/pages/Registrate.jsx';
 import Empresas from './components/pages/Empresas.jsx';
 import Instituciones from './components/pages/Instituciones.jsx';
 import Inicio from './components/pages/Inicio.jsx';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-
-
-
   
   const equipo = [
     { 
@@ -77,11 +74,15 @@ function App() {
         <Header />
         <Router>
       <Nav />
-      <Routes>
-        <Route path="./components/pages/Inicio.jsx" element={<Inicio />} />
-        <Route path="./components/pages/Empresas.jsx" element={<Empresas />} />
-        <Route path="./components/pages/Instituciones.jsx" element={<Instituciones />} />
+      <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Inicio />} />
+        <Route path=".components/pages/Empresas" element={<Empresas />} />
+        <Route path=".components/pages/Instituciones" element={<Instituciones />} />
       </Routes>
+    </AnimatePresence>
+
+
     </Router>
 
         <Main />

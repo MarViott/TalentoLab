@@ -35,6 +35,17 @@ h1 {
   line-height: 1.1;
 }
 
+.nav-link {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

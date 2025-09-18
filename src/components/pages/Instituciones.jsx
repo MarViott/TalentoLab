@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './styles/Instituciones.css';
+import { useState } from 'react';
+import './styles/Instituciones.css'; // Importa tus estilos personalizados desde './styles/Instituciones.css';
 
 const Instituciones = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
