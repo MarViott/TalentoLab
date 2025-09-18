@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles/Instituciones.css';
+import '../styles/Instituciones.css';
 
 const Instituciones = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
