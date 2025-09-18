@@ -13,10 +13,11 @@ import GaleriaIntereses from './components/GaleriaIntereses.jsx';
 import TarjetaEquipo from './components/TarjetaEquipo.jsx';
 import EquipoTalentoLab from './components/EquipoTalentoLab.jsx';
 import TarjetaProyecto from './components/TarjetaProyecto.jsx';
-import Formulario from './components/Registrate.jsx';
-import Contacto from './components/Contacto.jsx';
-import Registrate from './components/Registrate.jsx';
-import Empresas from './components/Empresas.jsx';
+import Formulario from './components/pages/Registrate.jsx';
+import Contacto from './components/pages/Contacto.jsx';
+import Registrate from './components/pages/Registrate.jsx';
+import Empresas from './components/pages/Empresas.jsx';
+import Instituciones from './components/pages/Instituciones.jsx';
 
 function App() {
   const equipo = [
@@ -71,7 +72,8 @@ function App() {
         <Main />
         <Gallery />
         
-        
+        <Empresas />
+        <Instituciones /> 
         
         <section className="section-equipo">
           
@@ -79,7 +81,7 @@ function App() {
           <EquipoTalentoLab equipo={equipo} />
         </section>       
 
-        <Empresas />
+              
         
         <section className="section-intereses">
           <h2>Intereses</h2>

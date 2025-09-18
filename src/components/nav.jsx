@@ -11,7 +11,7 @@ function Nav() {
             >  
             <ul style={{ listStyle: "none", display: "flex", justifyContent: "space-around", margin: 0 }}>  
                 <li><a href="#" style={{ color: "white", textDecoration: "none" }}>Inicio</a></li>  
-                <li><a href="#" style={{ color: "white", textDecoration: "none" }}>Empresas</a></li>  
+                <li><a href="src\components\Empresas.jsx" style={{ color: "white", textDecoration: "none" }}>Empresas</a></li>  
                 <li><a href="#" style={{ color: "white", textDecoration: "none" }}>Instituciones</a></li>  
             </ul>  
         </nav>  
