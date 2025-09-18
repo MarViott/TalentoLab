@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import './index.css';
+
 import { MiBoton } from './components/MiBoton.jsx';
 import Header from './components/Header';
 import Nav from './components/Nav';
@@ -18,8 +19,14 @@ import Contacto from './components/pages/Contacto.jsx';
 import Registrate from './components/pages/Registrate.jsx';
 import Empresas from './components/pages/Empresas.jsx';
 import Instituciones from './components/pages/Instituciones.jsx';
+import Inicio from './components/pages/Inicio.jsx';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
+
+
+
+  
   const equipo = [
     { 
       nombre: 'Ana',
@@ -68,7 +75,15 @@ function App() {
       
       <main className="app-main">
         <Header />
-        <Nav />
+        <Router>
+      <Nav />
+      <Routes>
+        <Route path="./components/pages/Inicio.jsx" element={<Inicio />} />
+        <Route path="./components/pages/Empresas.jsx" element={<Empresas />} />
+        <Route path="./components/pages/Instituciones.jsx" element={<Instituciones />} />
+      </Routes>
+    </Router>
+
         <Main />
         <Gallery />
         
