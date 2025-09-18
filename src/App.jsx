@@ -1,22 +1,20 @@
 import React from 'react';
 import './App.css';
 import './index.css';
+import { CartProvider } from './contexts/CartContext.jsx';
 import { MiBoton } from './components/MiBoton.jsx';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Gallery from './components/Gallery';
-import Footer from './components/Footer';
-import ListaEquipo from './components/ListaEquipo.jsx';
-import ListaUsuario from './components/ListaUsuarios.jsx';
-import GaleriaIntereses from './components/GaleriaIntereses.jsx';
-import TarjetaEquipo from './components/TarjetaEquipo.jsx';
+import Header from './components/header.jsx';
+import Nav from './components/nav.jsx';
+import Main from './components/Main.jsx';
+import Gallery from './components/gallery.jsx';
+import Footer from './components/footer.jsx';
 import EquipoTalentoLab from './components/EquipoTalentoLab.jsx';
 import TarjetaProyecto from './components/TarjetaProyecto.jsx';
-import Formulario from './components/Registrate.jsx';
 import Contacto from './components/Contacto.jsx';
 import Registrate from './components/Registrate.jsx';
 import Empresas from './components/Empresas.jsx';
+import Instituciones from './components/Instituciones.jsx';
+import Cart from './components/Cart.jsx';
 
 function App() {
   const equipo = [
@@ -56,66 +54,66 @@ function App() {
   const intereses = ['Tecnología', 'Deporte', 'Arte', 'Música', 'Lectura'];
 
   return (
-    <div className="app-container">
-      <header className="app-header">
-      <ol style={{ listStyle: "none", display: "flex", justifyContent: "space-evenly", margin: 10 }}>  
-                <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Registrate</a></li>  
-                <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Contacto</a></li>  
-                <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Carrito</a></li>  
-            </ol>         
-      </header>
-      
-      <main className="app-main">
-        <Header />
-        <Nav />
-        <Main />
-        <Gallery />
+    <CartProvider>
+      <div className="app-container">
+        <Cart />
+        <header className="app-header">
+        <ol style={{ listStyle: "none", display: "flex", justifyContent: "space-evenly", margin: 10 }}>  
+                  <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Registrate</a></li>  
+                  <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Contacto</a></li>  
+                  <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Carrito</a></li>  
+              </ol>         
+        </header>
         
-        
-        
-        <section className="section-equipo">
+        <main className="app-main">
+          <Header />
+          <Nav />
+          <Main />
+          <Gallery />
           
-          <h2>Nuestro Equipo</h2>         
-          <EquipoTalentoLab equipo={equipo} />
-        </section>       
+          <section className="section-instituciones">
+            <Instituciones />
+          </section>
+          
+          <section className="section-equipo">
+            
+            <h2>Nuestro Equipo</h2>         
+            <EquipoTalentoLab equipo={equipo} />
+          </section>       
 
-        <Empresas />
-        
-        <section className="section-intereses">
-          <h2>Intereses</h2>
-          <GaleriaIntereses intereses={intereses} />
-        </section>
-        
-        <section className="section-proyectos">
-          <h2>Proyectos</h2>
-          <TarjetaProyecto 
-            titulo="Proyecto Web Accesible" 
-            descripcion="Desarrollamos una plataforma web accesible para personas con discapacidades." 
-            botonTexto="Explorar" 
-          />
-        </section>
-        
-        <section className="section-acciones">
-          <MiBoton 
-            texto="Click me" 
-            color="#007bff"
-            onClick={() => alert('¡Botón clickeado!')} 
-          />
-        </section>
-        <section className="section-registro">
-          <h2>Regístrate</h2>
-          <Registrate />
-        </section>
-        <section className="section-contacto">
-          <h2>Contacto</h2>
-          <Contacto />
-        </section>
-       
+          <Empresas />
           
-      </main>
-      
-      <Footer />
-    </div>
+          <section className="section-proyectos">
+            <h2>Proyectos</h2>
+            <TarjetaProyecto 
+              titulo="Proyecto Web Accesible" 
+              descripcion="Desarrollamos una plataforma web accesible para personas con discapacidades." 
+              botonTexto="Explorar" 
+            />
+          </section>
+          
+          <section className="section-acciones">
+            <MiBoton 
+              texto="Click me" 
+              color="#007bff"
+              onClick={() => alert('¡Botón clickeado!')} 
+            />
+          </section>
+          <section className="section-registro">
+            <h2>Regístrate</h2>
+            <Registrate />
+          </section>
+          <section className="section-contacto">
+            <h2>Contacto</h2>
+            <Contacto />
+          </section>
+         
+            
+        </main>
+        
+        <Footer />
+      </div>
+    </CartProvider>
   );
 }
 

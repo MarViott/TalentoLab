@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useCart } from '../contexts/CartContext.jsx';
 import './styles/Instituciones.css';
 
 const Instituciones = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
+  const { addToCart } = useCart();
 
   // Paquetes de servicios tecnológicos
   const servicePackages = [
@@ -68,7 +70,19 @@ const Instituciones = () => {
     }
   ];
 
-  // Beneficios principales
+  const handleAddToCart = (pkg) => {
+    addToCart({
+      id: pkg.id,
+      name: pkg.name,
+      subtitle: pkg.subtitle,
+      price: pkg.price,
+      period: pkg.period,
+      description: pkg.description
+    });
+    
+    // Show confirmation message
+    alert(`${pkg.name} ha sido agregado al carrito!`);
+  };
   const benefits = [
     {
       icon: "🚀",
@@ -175,7 +189,16 @@ const Instituciones = () => {
                 </div>
 
                 <div className="package-footer">
-                  <button className={`package-button ${pkg.color}`}>
+                  <button 
+                    className={`package-button ${pkg.color}`}
+                    onClick={() => handleAddToCart(pkg)}
+                  >
+                    Agregar al Carrito
+                  </button>
+                  <button 
+                    className="package-button-secondary"
+                    onClick={() => alert(`Información sobre ${pkg.name}: Nos pondremos en contacto contigo en las próximas 24 horas para una consulta personalizada.`)}
+                  >
                     Solicitar Información
                   </button>
                   <p className="package-note">Sin compromiso inicial</p>
