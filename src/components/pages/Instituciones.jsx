@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './styles/Instituciones.css'; // Importa tus estilos personalizados desde './styles/Instituciones.css';
 
 const Instituciones = () => {

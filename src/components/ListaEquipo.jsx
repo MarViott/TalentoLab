@@ -6,7 +6,7 @@ function ListaEquipo() {
   { id: 2, nombre: 'Luis', tecnologia: 'Diseñador UX UI' },
   { id: 3, nombre: 'Matias', tecnologia: 'Desarrollador' },
   { id: 4, nombre: 'Sabrina', tecnologia: 'Desarrolladora' },
-  { id: 5, nombre: 'Ana', tecnologia: 'Diseñadora' },
+  { id: 5, nombre: 'Ana', tecnologia: 'Scrum Master' },
   { id: 6, nombre: 'Carlos', tecnologia: 'Marketing' }
 ];
 

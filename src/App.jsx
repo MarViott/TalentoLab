@@ -57,7 +57,6 @@ function App() {
     }
   ];
 
-
   const intereses = ['Tecnología', 'Deporte', 'Arte', 'Música', 'Lectura'];
 
   return (
@@ -81,23 +80,17 @@ function App() {
         <Route path=".components/pages/Instituciones" element={<Instituciones />} />
       </Routes>
     </AnimatePresence>
-
-
     </Router>
 
         <Main />
-        <Gallery />
-        
+        <Gallery />        
         <Empresas />
         <Instituciones /> 
         
-        <section className="section-equipo">
-          
+        <section className="section-equipo">          
           <h2>Nuestro Equipo</h2>         
           <EquipoTalentoLab equipo={equipo} />
-        </section>       
-
-              
+        </section>              
         
         <section className="section-intereses">
           <h2>Intereses</h2>
@@ -127,11 +120,9 @@ function App() {
         <section className="section-contacto">
           <h2>Contacto</h2>
           <Contacto />
-        </section>
-       
+        </section>       
           
-      </main>
-      
+      </main>      
       <Footer />
     </div>
   );
