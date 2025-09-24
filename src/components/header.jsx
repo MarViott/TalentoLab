@@ -1,8 +1,8 @@
 import React from 'react';  
 function Header() {  
     return ( 
-        <header style={{ 
-            backgroundColor: "#569264", 
+        <header style={{
+            backgroundColor: "#764ba2",
             padding: "10px", 
             textAlign: "center", 
             color: "white",
@@ -10,7 +10,8 @@ function Header() {
             height: "100px",
             alignItems: "center",
          }}>  
-            <h1>Bienvenidos a Talento Lab</h1>
+            <h1>Talento Lab</h1>
+            <p>Un laboratorio de ideas y talentos tecnológicos</p>
                   
         </header>  
     );  

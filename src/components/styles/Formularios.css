@@ -1,3 +1,443 @@
+/* Formularios.css - Estilos modernos para formularios */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Contenedor principal del registro */
+.registro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Header del registro */
+.registro-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.registro-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.registro-subtitle {
+  font-size: 1.125rem;
+  color: #4a5568;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Formulario principal */
+.registro-form {
+  background: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+/* Filas del formulario */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Inputs del formulario */
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  color: #2d3748;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #a0aec0;
+}
+
+/* Estados de error */
+.form-input.error,
+.form-select.error {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.error-text {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.global-error {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #feb2b2;
+}
+
+/* Textarea específico */
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* Footer del formulario */
+.form-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Botón de envío */
+.btn-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Disclaimer */
+.form-disclaimer {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* Mensaje de éxito */
+.success-message {
+  text-align: center;
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.success-message h2 {
+  color: #2d3748;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #4a5568;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .registro-container {
+    padding: 1rem;
+  }
+  
+  .registro-title {
+    font-size: 2rem;
+  }
+  
+  .registro-form {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .registro-title {
+    font-size: 1.75rem;
+  }
+  
+  .registro-subtitle {
+    font-size: 1rem;
+  }
+  
+  .registro-form {
+    padding: 1rem;
+  }
+}
+
+/* Animaciones de entrada */
+.registro-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects para inputs */
+.form-input:hover:not(:focus),
+.form-select:hover:not(:focus) {
+  border-color: #cbd5e0;
+}
+
+/* Focus dentro de grupos */
+.form-group:focus-within .form-label {
+  color: #667eea;
+}
+
+/* Estilos para selects mejorados */
+.form-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  appearance: none;
+}
+
+/* Tarjetas de información de contacto */
+.contact-info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card span {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+/* Mensaje de urgencia crítica */
+.urgent-notice {
+  background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+  color: #c53030;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+  border: 1px solid #feb2b2;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.urgent-notice strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Estilos específicos para el formulario de contacto */
+.registro-container .contact-info-cards + .registro-form {
+  margin-top: 0;
+}
+
+/* Mejoras responsivas para las tarjetas de contacto */
+@media (max-width: 768px) {
+  .contact-info-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem;
+  }
+  
+  .contact-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Indicadores visuales para niveles de urgencia */
+.form-select option[value="critica"] {
+  background-color: #fed7d7;
+  color: #c53030;
+  font-weight: bold;
+}
+
+.form-select option[value="alta"] {
+  background-color: #fef5e7;
+  color: #dd6b20;
+}
+
+.form-select option[value="media"] {
+  background-color: #e6fffa;
+  color: #319795;
+}
+
+.form-select option[value="baja"] {
+  background-color: #f0fff4;
+  color: #38a169;
+}
+
+/* Animación para el formulario de contacto */
+.contact-info-cards {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.registro-form {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+/* Mejoras adicionales para textarea del mensaje */
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Estilo para campos requeridos */
+.form-label::after {
+  content: '';
+}
+
+.form-label:has(+ .form-input[required])::after,
+.form-label:has(+ .form-select[required])::after,
+.form-label:has(+ .form-textarea[required])::after {
+  content: ' *';
+  color: #e53e3e;
+}
+
+/* Estilos adicionales para compatibilidad */
 .section-contacto {
     background-color: #f2f2f2;
     padding: 20px;
@@ -5,9 +445,22 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.section-contacto {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Mejoras de accesibilidad */
+.form-input:invalid,
+.form-select:invalid,
+.form-textarea:invalid {
+  box-shadow: none;
+}
+
+.form-input:focus:invalid,
+.form-select:focus:invalid,
+.form-textarea:focus:invalid {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Indicadores de carga específicos */
+.btn-submit.loading {
+  pointer-events: none;
+  opacity: 0.8;
 }

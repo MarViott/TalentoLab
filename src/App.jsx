@@ -1,13 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import './App.css';
 import './index.css';
 import { CartProvider } from './contexts/CartContext.jsx';
+import Inicio from './components/Inicio.jsx';
 import { MiBoton } from './components/MiBoton.jsx';
-import Header from './components/header.jsx';
-import Nav from './components/nav.jsx';
+import Header from './components/Header.jsx';
+import Nav from './components/Nav.jsx';
 import Main from './components/Main.jsx';
-import Gallery from './components/gallery.jsx';
-import Footer from './components/footer.jsx';
+import Gallery from './components/Gallery.jsx';
+import Footer from './components/Footer.jsx';
 import EquipoTalentoLab from './components/EquipoTalentoLab.jsx';
 import TarjetaProyecto from './components/TarjetaProyecto.jsx';
 import Contacto from './components/Contacto.jsx';
@@ -17,6 +19,7 @@ import Instituciones from './components/Instituciones.jsx';
 import Cart from './components/Cart.jsx';
 
 function App() {
+  // Make sure to wrap the whole return with <Router>
   const equipo = [
     { 
       nombre: 'Ana',
@@ -50,70 +53,67 @@ function App() {
     }
   ];
 
-
-  const intereses = ['Tecnología', 'Deporte', 'Arte', 'Música', 'Lectura'];
+  // const intereses = ['Tecnología', 'Deporte', 'Arte', 'Música', 'Lectura'];
 
   return (
-    <CartProvider>
-      <div className="app-container">
-        <Cart />
-        <header className="app-header">
-        <ol style={{ listStyle: "none", display: "flex", justifyContent: "space-evenly", margin: 10 }}>  
-                  <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Registrate</a></li>  
-                  <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Contacto</a></li>  
-                  <li><a href="#" style={{ color: "black", textDecoration: "none" }}>Carrito</a></li>  
-              </ol>         
-        </header>
-        
-        <main className="app-main">
+    <Router>
+      <CartProvider>
+        <div className="app">
           <Header />
           <Nav />
-          <Main />
-          <Gallery />
+          <Cart />
           
-          <section className="section-instituciones">
-            <Instituciones />
-          </section>
+          <main className="app-main">
+            <Routes>
+              {/* Rutas principales */}
+              <Route path="/" element={
+                <>
+                  <Inicio />
+                  <Main />
+                  <Gallery />
+                  <section className="section-equipo">
+                    <h2>Nuestro Equipo</h2>         
+                    <EquipoTalentoLab equipo={equipo} />
+                  </section>
+                  <section className="section-proyectos">
+                    <h2>Proyectos</h2>
+                    <TarjetaProyecto 
+                      titulo="Proyecto Web Accesible" 
+                      descripcion="Desarrollamos una plataforma web accesible para personas con discapacidades." 
+                      botonTexto="Explorar" 
+                    />
+                  </section>
+                  <section className="section-acciones">
+                    <MiBoton 
+                      texto="Conocer más" 
+                      color="#007bff"
+                      onClick={() => alert('¡Descubre más sobre nosotros!')} 
+                    />
+                  </section>
+                </>
+              } />
+              
+              {/* Rutas específicas */}
+              <Route path="/empresas" element={<Empresas />} />
+              <Route path="/instituciones" element={<Instituciones />} />
+              <Route path="/contacto" element={<Contacto />} />
+              <Route path="/registro" element={<Registrate />} />
+              <Route path="/carrito" element={<Cart />} />
+              
+              {/* Rutas legacy para compatibilidad */}
+              <Route path="/components/Inicio" element={<Inicio />} />
+              <Route path="/components/Empresas" element={<Empresas />} />
+              <Route path="/components/Instituciones" element={<Instituciones />} />
+              <Route path="/components/Registrate" element={<Registrate />} />
+              <Route path="/components/Contact" element={<Contacto />} />
+              <Route path="/components/Carrito" element={<Cart />} />
+            </Routes>
+          </main>
           
-          <section className="section-equipo">
-            
-            <h2>Nuestro Equipo</h2>         
-            <EquipoTalentoLab equipo={equipo} />
-          </section>       
-
-          <Empresas />
-          
-          <section className="section-proyectos">
-            <h2>Proyectos</h2>
-            <TarjetaProyecto 
-              titulo="Proyecto Web Accesible" 
-              descripcion="Desarrollamos una plataforma web accesible para personas con discapacidades." 
-              botonTexto="Explorar" 
-            />
-          </section>
-          
-          <section className="section-acciones">
-            <MiBoton 
-              texto="Click me" 
-              color="#007bff"
-              onClick={() => alert('¡Botón clickeado!')} 
-            />
-          </section>
-          <section className="section-registro">
-            <h2>Regístrate</h2>
-            <Registrate />
-          </section>
-          <section className="section-contacto">
-            <h2>Contacto</h2>
-            <Contacto />
-          </section>
-         
-            
-        </main>
-        
-        <Footer />
-      </div>
-    </CartProvider>
+          <Footer />
+        </div>
+      </CartProvider>    
+    </Router>  
   );
 }
 
