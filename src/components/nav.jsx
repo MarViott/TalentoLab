@@ -10,18 +10,19 @@ function Nav() {
     };
 
     return (  
-        <nav className="nav-container">            
-            <button 
-                className={`nav-toggle ${isMenuOpen ? 'active' : ''}`}
-                onClick={toggleMenu}
-                aria-label="Toggle menu"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <nav className="nav-container">
+            <div>                
+                <button 
+                    className={`nav-toggle ${isMenuOpen ? 'active' : ''}`}
+                    onClick={toggleMenu}
+                    aria-label="Toggle menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-            <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+                <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                 <li className="nav-item">
                     <Link 
                         className="nav-link" 
@@ -68,6 +69,7 @@ function Nav() {
                     </Link>
                 </li>
             </ul>
+            </div>
         </nav>
     );  
 }  

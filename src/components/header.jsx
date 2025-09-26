@@ -11,7 +11,10 @@ function Header() {
             alignItems: "center",
          }}>  
             <h1>Talento Lab</h1>
-            <p>Un laboratorio de ideas y talentos tecnológicos</p>
+            <p style={{ 
+                fontSize: "1.2rem",
+                color: "white" }}>
+                    Un laboratorio de ideas y talentos tecnológicos</p>
                   
         </header>  
     );  

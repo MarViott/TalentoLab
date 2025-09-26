@@ -53,6 +53,7 @@
 }
 
 .hero-subtitle {
+  color: whitesmoke;
   font-size: 1.25rem;
   margin-bottom: 3rem;
   opacity: 0.9;
@@ -346,12 +347,14 @@
 }
 
 .cta-title {
+  color: white;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .cta-subtitle {
+  color: whitesmoke;
   font-size: 1.125rem;
   margin-bottom: 2.5rem;
   opacity: 0.9;
@@ -400,9 +403,11 @@
   color: #2d3748;
 }
 
-.contact-info {
+.contact-info { 
+  color: whitesmoke; 
   margin-top: 2rem;
-  opacity: 0.8;
+  font-size: 0.875rem;  
+  opacity: 0.9;
 }
 
 /* Responsive Design */

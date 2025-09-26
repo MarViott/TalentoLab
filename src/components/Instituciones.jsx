@@ -220,7 +220,7 @@ const Instituciones = () => {
             <button className="cta-button primary">Agendar Consulta Gratuita</button>
             <button className="cta-button secondary">Descargar Brochure</button>
           </div>
-          <div className="contact-info">
+          <div className="cta-subtitle">
             <p>📞 +1 (555) 123-4567 | 📧 instituciones@talentotech.com</p>
           </div>
         </div>

@@ -205,7 +205,7 @@ export default function Contacto() {
         <div className="contact-card">
           <div className="contact-icon">📞</div>
           <h3>Teléfono</h3>
-          <p>+1 (555) 123-4567</p>
+          <p>+54 (911) 4178-5960</p>
           <span>Lun - Vie, 9:00 AM - 6:00 PM</span>
         </div>
         <div className="contact-card">
