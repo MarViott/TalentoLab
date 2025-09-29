@@ -3,9 +3,9 @@ import React from 'react';
 
 function Gallery() {  
     const images = [  
-        "https://picsum.photos/seed/1/200/300",  
-        "https://picsum.photos/seed/2/200/300",  
-        "https://picsum.photos/seed/3/200/300",         
+        "./src/assets/img/team0.jpg",  
+        "./src/assets/img/team1.jpg",  
+        "./src/assets/img/team3.jpg",         
     ];  
 
 
