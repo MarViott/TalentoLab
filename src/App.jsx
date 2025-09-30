@@ -24,27 +24,27 @@ function App() {
     { 
       nombre: 'Ana',
       descripcion: 'Desarrolladora Frontend',
-      imagen: 'https://picsum.photos/id/1011/200/200'
+      imagen: './src/assets/img/female0.jpg'
     },
     { 
       nombre: 'Luis',
       descripcion: 'Desarrollador Backend',
-      imagen: 'https://picsum.photos/id/1012/200/200'
+      imagen: './src/assets/img/talents0.jpg'
     },
     { 
       nombre: 'Marta',
       descripcion: 'Diseñadora UX/UI',
-      imagen: 'https://picsum.photos/id/1013/200/200'
+      imagen: './src/assets/img/female2.jpg'
     },
     { 
       nombre: 'Carlos',
       descripcion: 'Project Manager',
-      imagen: 'https://picsum.photos/id/1014/200/200'
+      imagen: './src/assets/img/team3.jpg'
     },
     { 
       nombre: 'Sofía',
       descripcion: 'Especialista en Marketing',
-      imagen: 'https://picsum.photos/id/1015/200/200'
+      imagen: './src/assets/img/female3.jpg'
     },
     { 
       nombre: 'Javier',

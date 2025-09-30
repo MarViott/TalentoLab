@@ -47,7 +47,7 @@ body {
   z-index: 100;
 }
 
-/* Secciones mejoradas */
+
 .section-equipo,
 .section-proyectos,
 .section-acciones,
@@ -81,7 +81,6 @@ body {
   color: white;
 }
 
-/* Títulos de sección mejorados */
 .section-equipo h2,
 .section-proyectos h2,
 .section-registro h2,
@@ -177,7 +176,7 @@ p {
 }
 
 .tarjeta-miembro {
-  background: #569264;
+  background: #f8f9fa;
   padding: 1.5rem;
   border-radius: 10px;
   border: 2px solid #e0e0e0;
@@ -209,36 +208,11 @@ p {
 }
 
 .miembro-descripcion, .miembro-rol {
-  color: white;
+  color: #666;
   font-size: 1rem;  
   margin: 5px 0;
 }
 
-/* Galería de intereses */
-.galeria-intereses {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 1rem;
-}
-
-.interes-boton {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.interes-boton:hover {
-  transform: scale(1.05);
-}
-
-.interes-boton.selected {
-  background: #569264 !important;
-  color: white !important;
-}
 
 /* Tarjeta de proyecto */
 .tarjeta-proyecto {

@@ -221,7 +221,7 @@ const Instituciones = () => {
             <button className="cta-button secondary">Descargar Brochure</button>
           </div>
           <div className="cta-subtitle">
-            <p>📞 +1 (555) 123-4567 | 📧 instituciones@talentotech.com</p>
+            <p style={{color: "white"}}> 📧 instituciones@talentolab.com</p>
           </div>
         </div>
       </div>
