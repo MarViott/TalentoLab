@@ -10,7 +10,7 @@ function Gallery() {
 
 
     return (  
-        <section style={{ 
+        <section className='section-gallery' style={{ 
             display: "flex", 
             gap: "10px", 
             justifyContent: "center", 
