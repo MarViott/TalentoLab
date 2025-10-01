@@ -1,6 +1,6 @@
 import React from 'react';
 function MiBoton ({texto, color, onClick}) {
-    const estilo = {
+    const estilo = {        
         padding: '10px 20px',
         backgroundColor: color || 'blue',
         color: 'white',

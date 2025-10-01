@@ -72,11 +72,11 @@ function App() {
                   <Main />
                   <Gallery />
                   <section className="section-equipo">
-                    <h2>Nuestro Equipo</h2>         
+                    <h2 style={{padding: "20px 300px"}}> Nuestro Equipo</h2>         
                     <EquipoTalentoLab equipo={equipo} />
                   </section>
                   <section className="section-proyectos">
-                    <h2>Proyectos</h2>
+                    <h2 style={{padding: "20px 300px"}}>Proyectos</h2>
                     <TarjetaProyecto 
                       titulo="Proyecto Web Accesible" 
                       descripcion="Desarrollamos una plataforma web accesible para personas con discapacidades." 
