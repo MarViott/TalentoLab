@@ -1,0 +1,30 @@
+.agenda-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .agenda-button {
+    padding: 8px 12px;
+    background-color: #f0f0ff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .agenda-dropdown {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 0.2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
