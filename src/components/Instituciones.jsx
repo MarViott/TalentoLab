@@ -67,6 +67,24 @@ const Instituciones = () => {
       ],
       popular: false,
       color: "purple"
+    },
+    {
+      id: 4,
+      name: "Custom",
+      subtitle: "Soluciones personalizadas",
+      price: "Contactanos",
+      period: "",
+      description: "Nuestro equipo especializado te ayudará a encontrar la solución perfecta para tus necesidades",
+      features: [
+        "Equipos a medida",
+        "Consultoría personalizada",
+        "Soporte dedicado",
+        "Capacitación personalizada",
+        "Integraciones personalizadas",
+        "Gestión de proyectos personalizada"
+      ],
+      popular: false,
+      color: "orange"
     }
   ];
 
@@ -103,6 +121,16 @@ const Instituciones = () => {
       icon: "🔒",
       title: "Seguridad Garantizada",
       description: "Cumplimiento de normativas y estándares de seguridad"
+    },
+    {
+      icon: "👥",
+      title: "Equipo Multidisciplinario",
+      description: "Profesionales con diferentes especialidades"
+    },
+    {
+      icon: "📈",
+      title: "Escalabilidad Flexible",
+      description: "Ajusta el tamaño del equipo según tus necesidades"
     }
   ];
 
