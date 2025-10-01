@@ -247,7 +247,7 @@ export default function Registrate() {
               value={formData.telefono}
               onChange={handleInputChange}
               className={`form-input ${errors.telefono ? 'error' : ''}`}
-              placeholder="+1 (555) 123-4567"
+              placeholder="+54 (911) 4178-5960"
             />
             {errors.telefono && <span className="error-text">{errors.telefono}</span>}
           </div>

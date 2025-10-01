@@ -19,11 +19,12 @@
 /* Hero Section */
 .hero-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  color: white;  
   padding: 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 
 .hero-section::before {
