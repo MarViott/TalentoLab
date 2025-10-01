@@ -220,6 +220,12 @@ export default function Contacto() {
           <p>soporte@talentotech.com</p>
           <span>Respuesta inmediata</span>
         </div>
+        <div className="contact-card">
+          <div className="contact-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>+54 (911) 4178-5960</p>
+          <span>Disponible 24/7</span>
+        </div>
       </div>
 
       <form className="registro-form" onSubmit={handleSubmit}>
