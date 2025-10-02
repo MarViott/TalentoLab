@@ -1,6 +1,4 @@
-import React from 'react';  
-
-
+import React from 'react'; 
 function Gallery() {  
     const images = [  
         "./src/assets/img/team0.jpg",  
