@@ -18,6 +18,7 @@ import Empresas from './components/Empresas.jsx';
 import Instituciones from './components/Instituciones.jsx';
 import Cart from './components/Cart.jsx';
 
+
 function App() {
   // Make sure to wrap the whole return with <Router>
   const equipo = [
@@ -53,8 +54,6 @@ function App() {
     }
   ];
 
-  // const intereses = ['Tecnología', 'Deporte', 'Arte', 'Música', 'Lectura'];
-
   return (
     <Router>
       <CartProvider>
@@ -63,7 +62,7 @@ function App() {
           <Nav />
           <Cart />
           
-          <main className="app-main">
+          
             <Routes>
               {/* Rutas principales */}
               <Route path="/" element={
@@ -97,7 +96,7 @@ function App() {
               <Route path="/empresas" element={<Empresas />} />
               <Route path="/instituciones" element={<Instituciones />} />
               <Route path="/contacto" element={<Contacto />} />
-              <Route path="/registro" element={<Registrate />} />
+              <Route path="/registro" element={<Registrate />} />              
               <Route path="/carrito" element={<Cart />} />
               
               {/* Rutas legacy para compatibilidad */}
@@ -106,9 +105,8 @@ function App() {
               <Route path="/components/Instituciones" element={<Instituciones />} />
               <Route path="/components/Registrate" element={<Registrate />} />
               <Route path="/components/Contact" element={<Contacto />} />
-              <Route path="/components/Carrito" element={<Cart />} />
-            </Routes>
-          </main>
+              <Route path="/components/Carrito" element={<Cart />} />              
+            </Routes>          
           
           <Footer />
         </div>

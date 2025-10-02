@@ -8,13 +8,12 @@ function Gallery() {
         "./src/assets/img/team3.jpg",         
     ];  
 
-
     return (  
         <section className='section-gallery' style={{ 
             display: "flex", 
-            gap: "10px", 
+            gap: "20px", 
             justifyContent: "center", 
-            marginTop: "20px" }}>
+            marginTop: "5px" }}>
                   
             {images.map((src, index) => (  
                 <img key={index} src={src} alt={`Imagen ${index + 1}`} style={{ width: "250px", height: "250px" }} />  

@@ -1,5 +1,8 @@
 import React from "react";
 function TarjetaEquipo({ equipo }) {
+
+    
+
     return (
         <div className="equipo-container">
         {equipo.map((miembro, index) => (
