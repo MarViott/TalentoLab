@@ -68,6 +68,15 @@ function Nav() {
                         Registrarse
                     </Link>
                 </li>
+                <li className="nav-item">
+                    <Link 
+                        className="nav-link cta-button" 
+                        to="/login"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Login
+                    </Link>
+                </li>
             </ul>
             </div>
         </nav>
