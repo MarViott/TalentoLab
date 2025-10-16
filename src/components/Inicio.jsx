@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/Inicio.css';
+import './styles/Nav.css';
 
 const Inicio = () => {
     return (

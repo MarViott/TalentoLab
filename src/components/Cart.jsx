@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
-import { useCart } from '../contexts/CartContext.jsx';
-import './styles/Cart.css';
+import React, { useState } from "react";
+import { useCart } from "../contexts/CartContext.jsx";
+import "./styles/Cart.css";
 
 const Cart = () => {
-  const { items, totalItems, totalAmount, removeFromCart, updateQuantity, clearCart } = useCart();
+  const {
+    items,
+    totalItems,
+    totalAmount,
+    removeFromCart,
+    updateQuantity,
+    clearCart,
+  } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [showCheckout, setShowCheckout] = useState(false);
 
   const formatPrice = (price) => {
-    if (typeof price === 'string') {
+    if (typeof price === "string") {
       return price;
     }
     return `$${price.toLocaleString()}`;
@@ -28,7 +35,11 @@ const Cart = () => {
 
   const handleContractService = () => {
     // Simulate service contracting
-    alert(`¡Gracias por contratar nuestros servicios!\n\nTotal: ${formatPrice(totalAmount)}\n\nNos pondremos en contacto contigo en las próximas 24 horas para coordinar la implementación.`);
+    alert(
+      `¡Gracias por contratar nuestros servicios!\n\nTotal: ${formatPrice(
+        totalAmount
+      )}\n\nNos pondremos en contacto contigo en las próximas 24 horas para coordinar la implementación.`
+    );
     clearCart();
     setShowCheckout(false);
     setIsOpen(false);
@@ -39,19 +50,14 @@ const Cart = () => {
       {/* Cart Toggle Button */}
       <div className="cart-toggle" onClick={() => setIsOpen(!isOpen)}>
         <span className="cart-icon">🛒</span>
-        {totalItems > 0 && (
-          <span className="cart-badge">{totalItems}</span>
-        )}
+        {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
       </div>
 
       {/* Cart Sidebar */}
-      <div className={`cart-sidebar ${isOpen ? 'open' : ''}`}>
+      <div className={`cart-sidebar ${isOpen ? "open" : ""}`}>
         <div className="cart-header">
           <h3>Carrito de Servicios</h3>
-          <button 
-            className="cart-close"
-            onClick={() => setIsOpen(false)}
-          >
+          <button className="cart-close" onClick={() => setIsOpen(false)}>
             ✕
           </button>
         </div>
@@ -70,27 +76,34 @@ const Cart = () => {
                     <div className="item-info">
                       <h4 className="item-name">{item.name}</h4>
                       <p className="item-subtitle">{item.subtitle}</p>
-                      <p className="item-price">{item.price}{item.period}</p>
+                      <p className="item-price">
+                        {item.price}
+                        {item.period}
+                      </p>
                     </div>
-                    
+
                     <div className="item-controls">
                       <div className="quantity-controls">
-                        <button 
+                        <button
                           className="quantity-btn"
-                          onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
+                          onClick={() =>
+                            handleQuantityChange(item.id, item.quantity - 1)
+                          }
                         >
                           -
                         </button>
                         <span className="quantity">{item.quantity}</span>
-                        <button 
+                        <button
                           className="quantity-btn"
-                          onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
+                          onClick={() =>
+                            handleQuantityChange(item.id, item.quantity + 1)
+                          }
                         >
                           +
                         </button>
                       </div>
-                      
-                      <button 
+
+                      <button
                         className="remove-btn"
                         onClick={() => removeFromCart(item.id)}
                         title="Eliminar del carrito"
@@ -109,21 +122,17 @@ const Cart = () => {
                 </div>
                 <div className="summary-row total">
                   <span>Total mensual:</span>
-                  <span className="total-amount">{formatPrice(totalAmount)}</span>
+                  <span className="total-amount">
+                    {formatPrice(totalAmount)}
+                  </span>
                 </div>
               </div>
 
               <div className="cart-actions">
-                <button 
-                  className="clear-cart-btn"
-                  onClick={clearCart}
-                >
+                <button className="clear-cart-btn" onClick={clearCart}>
                   Vaciar Carrito
                 </button>
-                <button 
-                  className="checkout-btn"
-                  onClick={handleCheckout}
-                >
+                <button className="checkout-btn" onClick={handleCheckout}>
                   Contratar Servicios
                 </button>
               </div>
@@ -138,24 +147,28 @@ const Cart = () => {
           <div className="checkout-content">
             <div className="checkout-header">
               <h3>Confirmar Contratación de Servicios</h3>
-              <button 
+              <button
                 className="modal-close"
                 onClick={() => setShowCheckout(false)}
               >
                 ✕
               </button>
             </div>
-            
+
             <div className="checkout-body">
               <div className="service-summary">
                 <h4>Resumen de Servicios:</h4>
                 {items.map((item) => (
                   <div key={item.id} className="checkout-item">
                     <span className="checkout-service">
-                      {item.name} ({item.quantity} mes{item.quantity > 1 ? 'es' : ''})
+                      {item.name} ({item.quantity} mes
+                      {item.quantity > 1 ? "es" : ""})
                     </span>
                     <span className="checkout-price">
-                      {formatPrice(parseFloat(item.price.replace(/[,$]/g, '')) * item.quantity)}
+                      {formatPrice(
+                        parseFloat(item.price.replace(/[,$]/g, "")) *
+                          item.quantity
+                      )}
                     </span>
                   </div>
                 ))}
@@ -177,16 +190,13 @@ const Cart = () => {
             </div>
 
             <div className="checkout-actions">
-              <button 
+              <button
                 className="cancel-btn"
                 onClick={() => setShowCheckout(false)}
               >
                 Cancelar
               </button>
-              <button 
-                className="confirm-btn"
-                onClick={handleContractService}
-              >
+              <button className="confirm-btn" onClick={handleContractService}>
                 Confirmar Contratación
               </button>
             </div>
@@ -196,7 +206,7 @@ const Cart = () => {
 
       {/* Overlay */}
       {(isOpen || showCheckout) && (
-        <div 
+        <div
           className="cart-overlay"
           onClick={() => {
             setIsOpen(false);

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import './App.css';
 import './index.css';
+import './components/styles/Nav.css';
 import { CartProvider } from './contexts/CartContext.jsx';
 import Inicio from './components/Inicio.jsx';
 import { MiBoton } from './components/MiBoton.jsx';
@@ -17,6 +18,9 @@ import Registrate from './components/Registrate.jsx';
 import Empresas from './components/Empresas.jsx';
 import Instituciones from './components/Instituciones.jsx';
 import Cart from './components/Cart.jsx';
+import Pagar from './components/Pagar.jsx';
+import IniciarSesion from './components/IniciarSesion.jsx';
+import RutaProtegida from './components/RutasProtegidas.jsx';
 
 
 function App() {
