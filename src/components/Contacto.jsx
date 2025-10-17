@@ -185,7 +185,8 @@ export default function Contacto() {
           >
             Enviar Otro Mensaje
           </button>
-        </div>
+        </div>            
+        
       </div>
     );
   }
@@ -221,9 +222,17 @@ export default function Contacto() {
           <span>Respuesta inmediata</span>
         </div>
         <div className="contact-card">
-          <div className="contact-icon">💬</div>
-          <h3>WhatsApp</h3>
-          <p>+54 (911) 4178-5960</p>
+          <div className="contact-icon">✅</div>
+          <h3>
+            <a 
+              href="https://wa.me/5491141785960?text=Hola%20TalentoTech%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              WhatsApp
+            </a>
+          </h3>                    
           <span>Disponible 24/7</span>
         </div>
       </div>

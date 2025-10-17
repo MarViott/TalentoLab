@@ -68,35 +68,36 @@ function App() {
           
           
             <Routes>
-              {/* Rutas principales */}
-              <Route path="/" element={
-                <>
-                  <Inicio />
-                  <Main />
-                  <Gallery />
-                  <section className="section-equipo">
-                    <h2 style={{padding: "20px 280px"}}> Nuestro Equipo</h2>         
-                    <EquipoTalentoLab equipo={equipo} />
-                  </section>
-                  <section className="section-proyectos">
-                    <h2 style={{padding: "20px 280px"}}>Proyectos 2025</h2>
-                    <TarjetaProyecto 
-                      titulo="Proyecto Web Accesible" 
-                      descripcion="Desarrollamos una plataforma web accesible para personas con discapacidades." 
-                      botonTexto="Explorar" 
-                    />
-                  </section>
-                  <section className="section-acciones">
-                    <MiBoton 
-                      texto="Conocer más" 
-                      color="#007bff"
-                      onClick={() => alert('¡Descubre más sobre nosotros!')} 
-                    />
-                  </section>
-                </>
-              } />
-              
-              {/* Rutas específicas */}
+              /* Rutas principales */
+                      <Route path="/" element={
+                      <>
+                        <Inicio />
+                        <Main />
+                        <Gallery />
+                        <section className="section-equipo">
+                        <h2 style={{padding: "20px 280px"}}> Nuestro Equipo</h2>         
+                        <EquipoTalentoLab equipo={equipo} />
+                        </section>
+                        <section className="section-proyectos">
+                        <h2 style={{padding: "20px 280px"}}>Proyectos 2025</h2>
+                        <TarjetaProyecto 
+                          titulo="Proyecto Web Accesible" 
+                          descripcion="Desarrollamos una plataforma web accesible para personas con discapacidades." 
+                          botonTexto="Explorar" 
+                          botonLink="https://github.com/MarViott/App-de-Accesibilidad"
+                        />
+                        </section>
+                        <section className="section-acciones">
+                        <MiBoton 
+                          texto="Conocer más" 
+                          color="#007bff"
+                          onClick={() => alert('¡Descubre más sobre nosotros!')} 
+                        />
+                        </section>
+                      </>
+                      } />
+                      
+                      {/* Rutas específicas */}
               <Route path="/empresas" element={<Empresas />} />
               <Route path="/instituciones" element={<Instituciones />} />
               <Route path="/contacto" element={<Contacto />} />
