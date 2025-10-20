@@ -1,20 +1,24 @@
 import "./styles/Formularios.css";
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useAuthContext } from "../contexts/AuthContext";
+
 function Login() {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuthContext();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simulación de autenticación
     if (usuario === "admin" && password === "1234") {
       login(usuario);
-      navigate("/dashboard");
+      // Redirigir a la página anterior o a dashboard
+      const from = location.state?.from || "/dashboard";
+      navigate(from);
     } else {
       alert("Credenciales incorrectas");
     }

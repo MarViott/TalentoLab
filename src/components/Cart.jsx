@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartContext.jsx";
+import { useAuthContext } from "../contexts/AuthContext.jsx";
 import "./styles/Cart.css";
 
 const Cart = () => {
@@ -11,6 +13,8 @@ const Cart = () => {
     updateQuantity,
     clearCart,
   } = useCart();
+  const { isAuthenticated } = useAuthContext();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [showCheckout, setShowCheckout] = useState(false);
 
@@ -30,6 +34,13 @@ const Cart = () => {
   };
 
   const handleCheckout = () => {
+    if (!isAuthenticated) {
+      // Si no está autenticado, redirigir a login
+      setIsOpen(false);
+      navigate("/login", { state: { from: "/pagar" } });
+      alert("Debes iniciar sesión para proceder con el pago");
+      return;
+    }
     setShowCheckout(true);
   };
 
