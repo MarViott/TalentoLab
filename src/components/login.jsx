@@ -24,26 +24,36 @@ function Login() {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Iniciar sesión</h2>
-      <div>
-        <label>Usuario:</label>
-        <input
-          type="text"
-          value={usuario}
-          onChange={(e) => setUsuario(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Contraseña:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <button type="submit">Iniciar sesión</button>
-    </form>
+    <div className="login-container">
+      <form onSubmit={handleSubmit}>
+        <h2>Iniciar sesión</h2>
+        <p className="subtitle">Ingresa tus credenciales para continuar</p>
+        <div>
+          <label>Usuario:</label>
+          <input
+            type="text"
+            value={usuario}
+            onChange={(e) => setUsuario(e.target.value)}
+            placeholder="Ingresa tu usuario"
+            required
+          />
+        </div>
+        <div>
+          <label>Contraseña:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Ingresa tu contraseña"
+            required
+          />
+        </div>
+        <button type="submit">Iniciar sesión</button>
+        <div className="form-footer">
+          ¿No tienes cuenta? <a href="/registro">Regístrate aquí</a>
+        </div>
+      </form>
+    </div>
   );
 }
 export default Login;
