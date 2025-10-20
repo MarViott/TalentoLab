@@ -4,7 +4,9 @@ import './App.css';
 import './index.css';
 import './components/styles/Nav.css';
 import { CartProvider } from './contexts/CartContext.jsx';
+import { AuthProvider } from './contexts/AuthContext.jsx';
 import Inicio from './components/Inicio.jsx';
+import Login from './components/login.jsx';
 import { MiBoton } from './components/MiBoton.jsx';
 import Header from './components/Header.jsx';
 import Nav from './components/Nav.jsx';
@@ -21,6 +23,8 @@ import Cart from './components/Cart.jsx';
 import Pagar from './components/Pagar.jsx';
 import IniciarSesion from './components/IniciarSesion.jsx';
 import RutaProtegida from './components/RutasProtegidas.jsx';
+
+
 
 
 function App() {
@@ -60,11 +64,12 @@ function App() {
 
   return (
     <Router>
-      <CartProvider>
-        <div className="app">
-          <Header />
-          <Nav />
-          <Cart />
+      <AuthProvider>
+        <CartProvider>
+          <div className="app">
+            <Header />
+            <Nav />
+            <Cart />
           
           
             <Routes>
@@ -103,19 +108,27 @@ function App() {
               <Route path="/contacto" element={<Contacto />} />
               <Route path="/registro" element={<Registrate />} />              
               <Route path="/carrito" element={<Cart />} />
-              
+              <Route path="/pagar" element={<Pagar />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/iniciarsesion" element={<IniciarSesion />} />
+             
               {/* Rutas legacy para compatibilidad */}
               <Route path="/components/Inicio" element={<Inicio />} />
               <Route path="/components/Empresas" element={<Empresas />} />
               <Route path="/components/Instituciones" element={<Instituciones />} />
               <Route path="/components/Registrate" element={<Registrate />} />
               <Route path="/components/Contact" element={<Contacto />} />
-              <Route path="/components/Carrito" element={<Cart />} />              
+              <Route path="/components/Carrito" element={<Cart />} />
+              <Route path="/components/Pagar" element={<Pagar />} />
+              <Route path="/components/IniciarSesion" element={<IniciarSesion />} />
+              <Route path="/components/login" element={<Login />} />
+             
             </Routes>          
           
           <Footer />
         </div>
-      </CartProvider>    
+      </CartProvider>
+      </AuthProvider>    
     </Router>  
   );
 }
