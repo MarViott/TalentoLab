@@ -1,14 +1,6 @@
-# Talento Lab
+# Talentolab
 
-**Laboratorio de ideas y talentos tecnológicos**
-
-Alumna: Marisa Viotti  
-TP Curso REACT-JS Talento Tech 2025  
-Profe: Matías Campos
-
----
-
-## 📖 Descripción
+## Descripción
 
 Talentolab es una aplicación web moderna desarrollada con React que permite gestionar y visualizar perfiles profesionales, servicios tecnológicos y equipos de trabajo. La aplicación ofrece una plataforma integral para conectar instituciones con talento tecnológico.
 
@@ -24,9 +16,7 @@ Talentolab es una aplicación web moderna desarrollada con React que permite ges
 
 ## 🛠️ Tecnologías utilizadas
 
-- **React 19** - Framework principal
-- **React Router DOM** - Navegación y rutas
-- **Vite** - Build tool y dev server
-- **CSS3** - Estilos personalizados con diseño responsivo
-- **Context API** - Gestión de estado global (Cart & Auth)
-- **ESLint** - Linting y calidad de código
+- React
+- TypeScript
+- CSS Modules
+- Axios para llamadas a la API
