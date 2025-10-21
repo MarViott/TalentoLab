@@ -11,8 +11,8 @@ import { MiBoton } from "./components/MiBoton.jsx";
 import Header from "./components/Header.jsx";
 import Nav from "./components/Nav.jsx";
 import Main from "./components/Main.jsx";
-import Gallery from "./components/Gallery.jsx";
-import Footer from "./components/Footer.jsx";
+import Gallery from "./components/gallery.jsx";
+import Footer from "./components/footer.jsx";
 import EquipoTalentoLab from "./components/EquipoTalentoLab.jsx";
 import TarjetaProyecto from "./components/TarjetaProyecto.jsx";
 import Contacto from "./components/Contacto.jsx";
@@ -24,7 +24,7 @@ import Pagar from "./components/Pagar.jsx";
 import IniciarSesion from "./components/IniciarSesion.jsx";
 import RutaProtegida from "./components/RutasProtegidas.jsx";
 
-function App() {  
+function App() {
   const equipo = [
     {
       nombre: "Ana",
@@ -93,7 +93,12 @@ function App() {
                       <MiBoton
                         texto="Conocer más"
                         color="#007bff"
-                        onClick={() => window.open("https://github.com/MarViott/App-de-Accesibilidad", "_blank")}
+                        onClick={() =>
+                          window.open(
+                            "https://github.com/MarViott/App-de-Accesibilidad",
+                            "_blank"
+                          )
+                        }
                       />
                     </section>
                   </>
@@ -118,7 +123,9 @@ function App() {
               {/* Rutas legacy para compatibilidad */}
               <Route path="/components/Inicio" element={<Inicio />} />
               <Route path="/components/Empresas" element={<Empresas />} />
-              <Route path="/components/Instituciones" element={<Instituciones />}
+              <Route
+                path="/components/Instituciones"
+                element={<Instituciones />}
               />
               <Route path="/components/Registrate" element={<Registrate />} />
               <Route path="/components/Contact" element={<Contacto />} />
