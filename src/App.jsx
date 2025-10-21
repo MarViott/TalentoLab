@@ -24,32 +24,39 @@ import Pagar from "./components/Pagar.jsx";
 import IniciarSesion from "./components/IniciarSesion.jsx";
 import RutaProtegida from "./components/RutasProtegidas.jsx";
 
+// Importar imágenes
+import female0 from "./assets/img/female0.jpg";
+import talents0 from "./assets/img/talents0.jpg";
+import female2 from "./assets/img/female2.jpg";
+import team3 from "./assets/img/team3.jpg";
+import female3 from "./assets/img/female3.jpg";
+
 function App() {
   const equipo = [
     {
       nombre: "Ana",
       descripcion: "Desarrolladora Frontend",
-      imagen: "./src/assets/img/female0.jpg",
+      imagen: female0,
     },
     {
       nombre: "Luis",
       descripcion: "Desarrollador Backend",
-      imagen: "./src/assets/img/talents0.jpg",
+      imagen: talents0,
     },
     {
       nombre: "Marta",
       descripcion: "Diseñadora UX/UI",
-      imagen: "./src/assets/img/female2.jpg",
+      imagen: female2,
     },
     {
       nombre: "Carlos",
       descripcion: "Project Manager",
-      imagen: "./src/assets/img/team3.jpg",
+      imagen: team3,
     },
     {
       nombre: "Sofía",
       descripcion: "Especialista en Marketing",
-      imagen: "./src/assets/img/female3.jpg",
+      imagen: female3,
     },
     {
       nombre: "Javier",
