@@ -204,21 +204,15 @@ export default function Contacto() {
       {/* Información de contacto rápido */}
       <div className="contact-info-cards">
         <div className="contact-card">
-          <div className="contact-icon">📞</div>
-          <h3>Teléfono</h3>
-          <p>+54 (911) 4178-5960</p>
-          <span>Lun - Vie, 9:00 AM - 6:00 PM</span>
-        </div>
-        <div className="contact-card">
           <div className="contact-icon">📧</div>
           <h3>Email</h3>
-          <p>contacto@talentotech.com</p>
+          <p>contacto@talento.com</p>
           <span>Respuesta en menos de 24h</span>
         </div>
         <div className="contact-card">
           <div className="contact-icon">🚨</div>
           <h3>Urgencias</h3>
-          <p>soporte@talentotech.com</p>
+          <p>soporte@talento.com</p>
           <span>Respuesta inmediata</span>
         </div>
         <div className="contact-card">

@@ -94,7 +94,7 @@ function App() {
                       <MiBoton
                         texto="Conocer más"
                         color="#007bff"
-                        onClick={() => alert("¡Descubre más sobre nosotros!")}
+                        onClick={() => window.open("https://github.com/MarViott/App-de-Accesibilidad", "_blank")}
                       />
                     </section>
                   </>
