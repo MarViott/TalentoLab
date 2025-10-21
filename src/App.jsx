@@ -24,8 +24,7 @@ import Pagar from "./components/Pagar.jsx";
 import IniciarSesion from "./components/IniciarSesion.jsx";
 import RutaProtegida from "./components/RutasProtegidas.jsx";
 
-function App() {
-  // Make sure to wrap the whole return with <Router>
+function App() {  
   const equipo = [
     {
       nombre: "Ana",
@@ -119,9 +118,7 @@ function App() {
               {/* Rutas legacy para compatibilidad */}
               <Route path="/components/Inicio" element={<Inicio />} />
               <Route path="/components/Empresas" element={<Empresas />} />
-              <Route
-                path="/components/Instituciones"
-                element={<Instituciones />}
+              <Route path="/components/Instituciones" element={<Instituciones />}
               />
               <Route path="/components/Registrate" element={<Registrate />} />
               <Route path="/components/Contact" element={<Contacto />} />
