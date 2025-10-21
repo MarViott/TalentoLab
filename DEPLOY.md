@@ -3,6 +3,7 @@
 ## 🚀 Guía de Deploy
 
 ### Requisitos previos
+
 - Cuenta en [Vercel](https://vercel.com)
 - Repositorio conectado a GitHub
 
@@ -50,6 +51,7 @@ vercel --prod
 ### 🔧 Configuración
 
 El proyecto incluye `vercel.json` con:
+
 - Rewrites para SPA (Single Page Application)
 - Cache optimizado para assets estáticos
 - Configuración de build automática
@@ -57,6 +59,7 @@ El proyecto incluye `vercel.json` con:
 ### 📦 Variables de Entorno
 
 Si necesitas variables de entorno:
+
 1. Ve a Project Settings en Vercel
 2. Sección "Environment Variables"
 3. Añade las variables necesarias con prefijo `VITE_`
@@ -64,6 +67,7 @@ Si necesitas variables de entorno:
 ### 🌐 Después del Deploy
 
 Una vez desplegado, Vercel proporcionará:
+
 - URL de producción: `https://tu-proyecto.vercel.app`
 - URL de preview para cada commit
 - Certificado SSL automático
