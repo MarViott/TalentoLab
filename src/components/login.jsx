@@ -18,7 +18,9 @@ function Login() {
       login(usuario);
       // Redirigir a la página anterior o a dashboard
       const from = location.state?.from || "/dashboard";
-      navigate(from);
+      // Si viene de /pagar, redirigir a la página principal para abrir el carrito
+      const destination = from === "/pagar" ? "/" : from;
+      navigate(destination);
     } else {
       alert("Credenciales incorrectas");
     }

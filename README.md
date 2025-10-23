@@ -1,6 +1,8 @@
 # Talentolab
 
-## Descripción
+Desarrollado por Marisa Viotti en el marco del curso de React/JS de Talento Tech del GCBA. Profesor: Matías Campos
+
+## Descripción del proyecto
 
 Talentolab es una aplicación web moderna desarrollada con React que permite gestionar y visualizar perfiles profesionales, servicios tecnológicos y equipos de trabajo. La aplicación ofrece una plataforma integral para conectar instituciones con talento tecnológico.
 

@@ -243,6 +243,27 @@
   font-weight: 700;
 }
 
+/* Auth Warning */
+.auth-warning {
+  margin: 1rem;
+  padding: 1rem;
+  background: #fef5e7;
+  border: 2px solid #f39c12;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.auth-warning p {
+  margin: 0;
+  color: #856404;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.auth-warning strong {
+  color: #f39c12;
+}
+
 /* Cart Actions */
 .cart-actions {
   padding: 1rem;
@@ -499,5 +520,226 @@
   
   .checkout-actions {
     padding: 1rem;
+  }
+}
+
+/* Payment Form Styles */
+.payment-form-content {
+  max-width: 700px;
+  max-height: 90vh;
+}
+
+.payment-form-content .checkout-body {
+  max-height: calc(90vh - 150px);
+  overflow-y: auto;
+}
+
+.payment-section {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.payment-section h4 {
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 0.625rem 0.875rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #a0aec0;
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.payment-method-option {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-method-option:hover {
+  border-color: #667eea;
+  background: #f7fafc;
+}
+
+.payment-method-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.payment-method-option input[type="radio"]:checked + span {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.payment-method-option span {
+  font-size: 0.9rem;
+  color: #2d3748;
+  transition: all 0.2s ease;
+}
+
+/* Card Details */
+.card-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Transfer and PayPal Info */
+.transfer-info,
+.paypal-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.transfer-info ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  color: #4a5568;
+}
+
+.transfer-info li,
+.paypal-info p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.transfer-note,
+.paypal-note {
+  margin-top: 1rem !important;
+  padding: 0.75rem;
+  background: #edf2f7;
+  border-radius: 6px;
+  color: #2d3748;
+  font-size: 0.85rem !important;
+}
+
+/* Terms Checkbox */
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  margin-top: 0.25rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.terms-checkbox span {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.terms-checkbox a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for Payment Form */
+@media (max-width: 768px) {
+  .payment-form-content {
+    width: 95%;
+    max-width: 95%;
+    margin: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+  }
+
+  .payment-method-option {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-section {
+    padding: 1rem;
+  }
+
+  .payment-section h4 {
+    font-size: 1rem;
+  }
+
+  .form-group input {
+    font-size: 0.875rem;
   }
 }
