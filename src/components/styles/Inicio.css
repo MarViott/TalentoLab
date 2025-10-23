@@ -29,3 +29,41 @@
         font-size: 1rem;
     }
 }
+
+/* Video Section */
+.video-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.hero-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        padding: 0 0.5rem;
+        margin: 1.5rem auto;
+    }
+    
+    .hero-video {
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section {
+        margin: 1rem auto;
+    }
+    
+    .hero-video {
+        border-radius: 6px;
+    }
+}

@@ -82,7 +82,18 @@ function App() {
                   <>
                     <Inicio />
                     <Main />
-                    <Gallery />
+                    <section className="video-section">
+                      <video
+                        className="hero-video"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source src="/talentolab.mp4" type="video/mp4" />
+                        Tu navegador no soporta el elemento de video.
+                      </video>
+                    </section>
                     <section className="section-equipo">
                       <h2 style={{ padding: "20px 280px" }}> Nuestro Equipo</h2>
                       <EquipoTalentoLab equipo={equipo} />
