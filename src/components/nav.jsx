@@ -44,10 +44,10 @@ function Nav() {
                 <li className="nav-item">
                     <Link 
                         className="nav-link" 
-                        to="/instituciones"
+                        to="/servicios"
                         onClick={() => setIsMenuOpen(false)}
                     >
-                        Instituciones
+                        Servicios
                     </Link>
                 </li>
                 <li className="nav-item">

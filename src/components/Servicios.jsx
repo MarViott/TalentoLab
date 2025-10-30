@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useCart } from '../contexts/CartContext.jsx';
-import './styles/Instituciones.css';
+import React, { useState } from "react";
+import { useCart } from "../contexts/CartContext.jsx";
+import "./styles/Servicios.css";
 
-const Instituciones = () => {
+const Servicios = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const { addToCart } = useCart();
 
@@ -14,17 +14,18 @@ const Instituciones = () => {
       subtitle: "Ideal para instituciones pequeñas",
       price: "$2,500",
       period: "/mes",
-      description: "Perfecto para organizaciones que necesitan talento tecnológico específico",
+      description:
+        "Perfecto para organizaciones que necesitan talento tecnológico específico",
       features: [
         "1-3 profesionales especializados",
         "Desarrolladores Full Stack",
         "Soporte técnico básico",
         "Gestión de proyectos incluida",
         "Onboarding rápido (48h)",
-        "Comunicación por email/chat"
+        "Comunicación por email/chat",
       ],
       popular: false,
-      color: "blue"
+      color: "blue",
     },
     {
       id: 2,
@@ -41,10 +42,10 @@ const Instituciones = () => {
         "Soporte 24/7",
         "Reuniones semanales",
         "Métricas y reportes",
-        "Capacitación del equipo interno"
+        "Capacitación del equipo interno",
       ],
       popular: true,
-      color: "green"
+      color: "green",
     },
     {
       id: 3,
@@ -63,10 +64,10 @@ const Instituciones = () => {
         "SLA garantizado",
         "Integración con sistemas legacy",
         "Auditorías de código",
-        "Escalabilidad empresarial"
+        "Escalabilidad empresarial",
       ],
       popular: false,
-      color: "purple"
+      color: "purple",
     },
     {
       id: 4,
@@ -74,18 +75,19 @@ const Instituciones = () => {
       subtitle: "Soluciones personalizadas",
       price: "Contactanos",
       period: "",
-      description: "Nuestro equipo especializado te ayudará a encontrar la solución perfecta para tus necesidades",
+      description:
+        "Nuestro equipo especializado te ayudará a encontrar la solución perfecta para tus necesidades",
       features: [
         "Equipos a medida",
         "Consultoría personalizada",
         "Soporte dedicado",
         "Capacitación personalizada",
         "Integraciones personalizadas",
-        "Gestión de proyectos personalizada"
+        "Gestión de proyectos personalizada",
       ],
       popular: false,
-      color: "orange"
-    }
+      color: "orange",
+    },
   ];
 
   const handleAddToCart = (pkg) => {
@@ -95,9 +97,9 @@ const Instituciones = () => {
       subtitle: pkg.subtitle,
       price: pkg.price,
       period: pkg.period,
-      description: pkg.description
+      description: pkg.description,
     });
-    
+
     // Show confirmation message
     alert(`${pkg.name} ha sido agregado al carrito!`);
   };
@@ -105,37 +107,37 @@ const Instituciones = () => {
     {
       icon: "🚀",
       title: "Implementación Rápida",
-      description: "Equipos listos para trabajar en menos de 48 horas"
+      description: "Equipos listos para trabajar en menos de 48 horas",
     },
     {
       icon: "🎯",
       title: "Talento Especializado",
-      description: "Profesionales con experiencia en sector público y privado"
+      description: "Profesionales con experiencia en sector público y privado",
     },
     {
       icon: "💰",
       title: "Costo Optimizado",
-      description: "Hasta 40% menos costoso que contratación directa"
+      description: "Hasta 40% menos costoso que contratación directa",
     },
     {
       icon: "🔒",
       title: "Seguridad Garantizada",
-      description: "Cumplimiento de normativas y estándares de seguridad"
+      description: "Cumplimiento de normativas y estándares de seguridad",
     },
     {
       icon: "👥",
       title: "Equipo Multidisciplinario",
-      description: "Profesionales con diferentes especialidades"
+      description: "Profesionales con diferentes especialidades",
     },
     {
       icon: "📈",
       title: "Escalabilidad Flexible",
-      description: "Ajusta el tamaño del equipo según tus necesidades"
-    }
+      description: "Ajusta el tamaño del equipo según tus necesidades",
+    },
   ];
 
   return (
-    <div className="instituciones-container">
+    <div className="servicios-container">
       {/* Hero Section */}
       <div className="hero-section">
         <div className="hero-content">
@@ -143,7 +145,8 @@ const Instituciones = () => {
             Talento Tecnológico para tu Institución
           </h1>
           <p className="hero-subtitle">
-            Conectamos a las mejores instituciones públicas y privadas con profesionales tecnológicos altamente calificados
+            Conectamos a las mejores instituciones públicas y privadas con
+            profesionales tecnológicos altamente calificados
           </p>
           <div className="hero-stats">
             <div className="stat">
@@ -165,7 +168,9 @@ const Instituciones = () => {
       {/* Benefits Section */}
       <div className="benefits-section">
         <div className="container">
-          <h2 className="section-title">¿Por qué elegir nuestro talento tecnológico?</h2>
+          <h2 className="section-title">
+            ¿Por qué elegir nuestro talento tecnológico?
+          </h2>
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
               <div key={index} className="benefit-card">
@@ -183,18 +188,23 @@ const Instituciones = () => {
         <div className="container">
           <h2 className="section-title">Nuestros Paquetes de Servicios</h2>
           <p className="section-subtitle">
-            Elige el plan que mejor se adapte a las necesidades de tu institución
+            Elige el plan que mejor se adapte a las necesidades de tu
+            institución
           </p>
-          
+
           <div className="packages-grid">
             {servicePackages.map((pkg) => (
-              <div 
-                key={pkg.id} 
-                className={`package-card ${pkg.popular ? 'popular' : ''} ${selectedPackage === pkg.id ? 'selected' : ''}`}
+              <div
+                key={pkg.id}
+                className={`package-card ${pkg.popular ? "popular" : ""} ${
+                  selectedPackage === pkg.id ? "selected" : ""
+                }`}
                 onClick={() => setSelectedPackage(pkg.id)}
               >
-                {pkg.popular && <div className="popular-badge">Más Popular</div>}
-                
+                {pkg.popular && (
+                  <div className="popular-badge">Más Popular</div>
+                )}
+
                 <div className="package-header">
                   <h3 className="package-name">{pkg.name}</h3>
                   <p className="package-subtitle">{pkg.subtitle}</p>
@@ -217,15 +227,19 @@ const Instituciones = () => {
                 </div>
 
                 <div className="package-footer">
-                  <button 
+                  <button
                     className={`package-button ${pkg.color}`}
                     onClick={() => handleAddToCart(pkg)}
                   >
                     Agregar al Carrito
                   </button>
-                  <button 
+                  <button
                     className="package-button-secondary"
-                    onClick={() => alert(`Información sobre ${pkg.name}: Nos pondremos en contacto contigo en las próximas 24 horas para una consulta personalizada.`)}
+                    onClick={() =>
+                      alert(
+                        `Información sobre ${pkg.name}: Nos pondremos en contacto contigo en las próximas 24 horas para una consulta personalizada.`
+                      )
+                    }
                   >
                     Solicitar Información
                   </button>
@@ -242,14 +256,17 @@ const Instituciones = () => {
         <div className="container">
           <h2 className="cta-title">¿Listo para potenciar tu institución?</h2>
           <p className="cta-subtitle">
-            Contáctanos hoy y descubre cómo nuestro talento tecnológico puede transformar tu organización
+            Contáctanos hoy y descubre cómo nuestro talento tecnológico puede
+            transformar tu organización
           </p>
           <div className="cta-buttons">
-            <button className="cta-button primary">Agendar Consulta Gratuita</button>
+            <button className="cta-button primary">
+              Agendar Consulta Gratuita
+            </button>
             <button className="cta-button secondary">Descargar Brochure</button>
           </div>
           <div className="cta-subtitle">
-            <p style={{color: "white"}}> 📧 instituciones@talentolab.com</p>
+            <p style={{ color: "white" }}> 📧 instituciones@talentolab.com</p>
           </div>
         </div>
       </div>
@@ -257,4 +274,4 @@ const Instituciones = () => {
   );
 };
 
-export default Instituciones;
+export default Servicios;

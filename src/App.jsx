@@ -18,7 +18,7 @@ import TarjetaProyecto from "./components/TarjetaProyecto.jsx";
 import Contacto from "./components/Contacto.jsx";
 import Registrate from "./components/Registrate.jsx";
 import Empresas from "./components/Empresas.jsx";
-import Instituciones from "./components/Instituciones.jsx";
+import Servicios from "./components/Servicios.jsx";
 import Cart from "./components/Cart.jsx";
 import Pagar from "./components/Pagar.jsx";
 import IniciarSesion from "./components/IniciarSesion.jsx";
@@ -124,7 +124,7 @@ function App() {
               />
               {/* Rutas específicas */}
               <Route path="/empresas" element={<Empresas />} />
-              <Route path="/instituciones" element={<Instituciones />} />
+              <Route path="/servicios" element={<Servicios />} />
               <Route path="/contacto" element={<Contacto />} />
               <Route path="/registro" element={<Registrate />} />
               <Route path="/carrito" element={<Cart />} />
@@ -141,10 +141,7 @@ function App() {
               {/* Rutas legacy para compatibilidad */}
               <Route path="/components/Inicio" element={<Inicio />} />
               <Route path="/components/Empresas" element={<Empresas />} />
-              <Route
-                path="/components/Instituciones"
-                element={<Instituciones />}
-              />
+              <Route path="/components/Servicios" element={<Servicios />} />
               <Route path="/components/Registrate" element={<Registrate />} />
               <Route path="/components/Contact" element={<Contacto />} />
               <Route path="/components/Carrito" element={<Cart />} />
